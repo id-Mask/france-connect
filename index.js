@@ -5,12 +5,9 @@ import { config } from './config.js';
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.json({ hi: 'hello' });
-});
 
 // Initial entry point to guide the user to authorize access to their data
-app.get('/login', (req, res) => {
+app.get('/', (req, res) => {
   const query = {
     scope: `${config.FC_SCOPES}`,
     redirect_uri: `${config.FS_URL}${config.DATA_CALLBACK_FS_PATH}`,
