@@ -63,6 +63,6 @@ app.get(`${config.DATA_CALLBACK_FS_PATH}`, async (req, res) => {
   res.json(userInfo);
 });
 
-app.listen(3000, () => {
-  console.log('Server running on http://localhost:3000');
+app.listen(8080, () => {
+  console.log('Server running on http://localhost:8080');
 });
